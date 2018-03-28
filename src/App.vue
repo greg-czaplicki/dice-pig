@@ -1,11 +1,19 @@
 <template>
   <div id="app">
-    <h1>Hello</h1>
+    <player-names />
+    <player-scores />
   </div>
 </template>
 
 <script>
+import PlayerScores from './components/PlayerScores';
+import PlayerNames from './components/PlayerNames';
+
 export default {
+  components: {
+    PlayerScores,
+    PlayerNames
+  },
   data() {
     return {};
   }
@@ -14,6 +22,7 @@ export default {
 
 <style lang="scss">
 #app {
+  display: grid;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -25,19 +34,5 @@ export default {
 h1,
 h2 {
   font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
 }
 </style>
